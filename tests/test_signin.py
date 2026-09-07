@@ -1,10 +1,10 @@
 from playwright.sync_api import sync_playwright, expect, Page
 import pytest
 
-from pages.signInpage import SignInHome
+from pages.signinpage import SignInHome
 from pages.homepage import AmazonHomePage
 
-@pytest.mark.smoke5
+@pytest.mark.smoke
 def test_signin(page:Page, navigate_to_amazon):
     home_page_obj= AmazonHomePage(page)
     signin_page_obj= SignInHome(page)
